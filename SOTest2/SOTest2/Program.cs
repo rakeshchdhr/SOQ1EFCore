@@ -26,6 +26,10 @@ namespace SOTest2
                     }
                 };
                 db.ServiceReviews.Add(serviceReview);
+
+                var review = new Review() { Name = "TestReivew Only", ServiceReviews = null };
+                db.Review.Add(review);
+
                 db.SaveChanges();
             }
 
